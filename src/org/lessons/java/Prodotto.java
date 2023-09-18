@@ -1,6 +1,9 @@
 package org.lessons.java;
 
+import java.util.Scanner;
+
 public class Prodotto {
+	Scanner sc= new Scanner(System.in);
 	
 	private String codice;
 	
@@ -12,7 +15,23 @@ public class Prodotto {
 	
 	private int prezzo; 
 	
-	Prodotto(String nome, String marca, int prezzo, String codice){
+	 public Prodotto(){
+		System.out.println("Inserire dettagli.");
+		System.out.print("Nome: ");
+	      this.nome = sc.nextLine();
+	      System.out.print("Marca: ");
+	      this.marca = sc.nextLine();
+	      System.out.print("Prezzo: ");
+	      this.prezzo = sc.nextInt();
+	   
+	      sc.nextLine(); 
+	      System.out.print("Codice: ");
+	      this.codice = sc.nextLine();
+	      setIva(22);
+	  	
+	}
+	
+	public Prodotto(String nome, String marca, int prezzo, String codice){
 		
 		setNome(nome);
 		setMarca(marca);
@@ -58,6 +77,7 @@ public class Prodotto {
 	public int getIva() {
 		return iva;
 	}
+
 	
 	public void setIva(int iva) {
 		this.iva=iva;
@@ -83,6 +103,8 @@ public class Prodotto {
 
 		return dettagliProdotto();
 	}
+
+
 	
 }
 

@@ -38,6 +38,14 @@ public class Cuffie extends Prodotto{
 				"\nConnettore: " + (wireless? "Wireless": "Cablate");
 				 
 	}
+	public Cuffie() {
+		super();
+		  System.out.print("Colore: ");
+        this.colore = sc.nextLine();
+        System.out.print("Wireless (S/N): ");
+       this.wireless = sc.nextLine().equalsIgnoreCase("S");
+	
+	}
 }
 	
 	

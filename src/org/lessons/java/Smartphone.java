@@ -37,4 +37,13 @@ public class Smartphone extends Prodotto {
 				getMemoria() +"Gb"; 
 	}
 	
+	public Smartphone() {
+		super();
+		  System.out.print("IMEI: ");
+       this.imei = sc.nextLine();
+        System.out.print("Memoria (GB): ");
+        this.memoria = sc.nextInt();
+		
+	}
+	
 }

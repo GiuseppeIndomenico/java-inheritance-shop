@@ -32,8 +32,17 @@ public class Tv extends Prodotto {
 	public String toString() {
 		
 		return super.toString() +
-				"\ndimensione: " + getDimensione() + "''" +
+				"\ndimensione: " + getDimensione() + "pollici" +
 				"\nSmart TV: " + (smart? "smart": "no smart");
 				 
+	}
+	public Tv() {
+		super();
+		System.out.print("Dimensioni (pollici): ");
+		this.dimensione = sc.nextInt();
+		sc.nextLine(); // Consuma la nuova riga rimanente dopo nextInt()
+		System.out.print("Smart (S/N): ");
+		this.smart = sc.nextLine().equalsIgnoreCase("S");
+		
 	}
 }
